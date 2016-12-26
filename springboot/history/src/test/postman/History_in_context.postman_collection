@@ -1,0 +1,62 @@
+{
+	"variables": [],
+	"info": {
+		"name": "History in context",
+		"_postman_id": "78b7778b-578b-6988-fa02-6e96abf81031",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "retrive all events ",
+			"request": {
+				"url": "http://localhost:8080/events",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Get all events from history app "
+			},
+			"response": []
+		},
+		{
+			"name": "insert new envets",
+			"request": {
+				"url": "http://localhost:8080/events",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n   \n    \"where\": \"Richmond\",\n    \"what\": \"war\"\n    \n  },\n  {\n     \"where\": \"Colorado\",\n    \"what\": \"move in\"\n    \n  }\n]"
+				},
+				"description": "Insert event to history app "
+			},
+			"response": []
+		},
+		{
+			"name": "remove all Envets ",
+			"request": {
+				"url": "http://localhost:8080/events",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Remove all events in history app "
+			},
+			"response": []
+		}
+	]
+}
